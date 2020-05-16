@@ -30,3 +30,6 @@ alias gco='git branch -a | fzf | xargs git checkout'
 # Easily startup python venv
 alias venv='source venv/bin/activate'
 
+# Misc
+alias ll='ls -lah'
+
