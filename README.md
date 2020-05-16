@@ -1,16 +1,28 @@
 # Customization
 
-The objective for this repo is to store differents customizations that I appreciate having on my computers.
+The objective for this repo is to store the different customizations that I appreciate having on my computer.
+This allows me to get all I need to setup my stuff easily from any computer.
 
-This allows an easier portability for me: being able to get all my configurations and setups easily from any computer.
+For convenience, I'll assume that this repo is cloned into `~/.custom/`
 
 ## Aliases
 
-To Be Added.
+The file `bash_aliases.sh` contains my bash aliases (as expected).
+In order for them to be loaded properly, add the following snippet to `~/.bashrc`:
 
-## Vimrc
+```bash
+# Add bash aliases.
+if [ -f ~/.custom/bash_aliases.sh ]; then
+    source ~/.custom/bash_aliases.sh
+fi
+```
 
-To Be Added.
+## TODO
 
+*  Add .vimrc configuration
+*  Try out new fun looking tools (namely fzf, fd, rg, z and some Vim plugins)
+*  Automate the addition to the .bashrcfile (with a Makefile ? A bash script ?)
+*  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 
 Author: Yannick SCHINI
+
