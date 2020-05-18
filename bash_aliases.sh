@@ -9,6 +9,7 @@ alias grbi='git rebase -i'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias ga='git add'
+alias gbr='git branch'
 
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
   source /usr/share/bash-completion/completions/git
@@ -20,11 +21,11 @@ if [ -f "/usr/share/bash-completion/completions/git" ]; then
   __git_complete grba _git_rebase
   __git_complete grbc _git_rebase
   __git_complete ga _git_add
+  __git_complete gbr _git_branch
 else
   echo "Error loading git completions"
 fi
 
-alias gbr='git branch -a | fzf'
 alias gco='git branch -a | fzf | xargs git checkout'
 
 # Easily startup python venv
