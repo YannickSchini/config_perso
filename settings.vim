@@ -1,3 +1,4 @@
+
 set nocompatible
 set nu
 set rnu
@@ -43,24 +44,4 @@ inoremap <Tab> <Esc>`^
 
 " For VIM Signify (default is 4000ms - way too long)
 set updatetime=100
-
-" -----------------------------------------------------------------------------
-" Plugins
-" -----------------------------------------------------------------------------
-
-" Specify a directory for plugins.
-call plug#begin('~/.vim/plugged')
-
-" Integrate fzf with Vim.
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" Automatically clear search highlights after you move your cursor.
-Plug 'haya14busa/is.vim'
-
-" Show git file changes in the gutter.
-Plug 'mhinz/vim-signify'
-
-" Initialize plugin system
-call plug#end()
 
