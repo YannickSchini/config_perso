@@ -30,7 +30,7 @@ endtry
 
 ## TODO
 
-*  Try out new fun looking tools (namely fzf, fd, rg, z and some Vim plugins)
+*  Try out new fun looking tools (namely fzf, fd, rg, z and some Vim plugins like incsearch, fzf, vim fugitive, nerdtree, etc)
 *  Automate the addition to the .bashrcfile (with a Makefile ? A bash script ?)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 
