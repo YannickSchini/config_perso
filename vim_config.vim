@@ -1,3 +1,4 @@
+set nocompatible
 set nu
 set rnu
 set history=500
@@ -18,12 +19,8 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+colorscheme slate  
 
-set background=dark
 set encoding=utf8
 set expandtab
 set smarttab
@@ -41,3 +38,7 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+inoremap <Tab> <Esc>`^
+
+
