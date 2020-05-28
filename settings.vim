@@ -19,7 +19,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-colorscheme slate  
+colorscheme slate
 
 set encoding=utf8
 set expandtab
@@ -36,3 +36,5 @@ inoremap <Tab> <Esc>`^
 " For VIM Signify (default is 4000ms - way too long)
 set updatetime=100
 
+" Remove trailing white-space
+autocmd BufWritePre * %s/\s\+$//e
