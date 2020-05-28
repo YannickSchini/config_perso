@@ -15,6 +15,9 @@ Plug 'haya14busa/is.vim'
 " Show git file changes in the gutter.
 Plug 'mhinz/vim-signify'
 
+" Power up the status bar
+Plug 'vim-airline/vim-airline'
+
 " Initialize plugin system
 call plug#end()
 

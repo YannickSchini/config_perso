@@ -1,4 +1,3 @@
-
 set nocompatible
 set nu
 set rnu
@@ -31,14 +30,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
 
 inoremap <Tab> <Esc>`^
 
