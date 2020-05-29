@@ -38,3 +38,9 @@ set updatetime=100
 
 " Remove trailing white-space
 autocmd BufWritePre * %s/\s\+$//e
+
+" For Airline to show open buffers in tabs
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts = 1
+
