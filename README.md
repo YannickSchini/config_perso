@@ -29,10 +29,17 @@ catch
 endtry
 ```
 
-## TODO
+# Dependencies
 
+*  [FZF](https://github.com/junegunn/fzf#using-linux-package-managers)
+*  [Vim Plug](https://github.com/junegunn/vim-plug)
+*  [Powerline fonts](https://github.com/powerline/fonts)
+
+# TODO
+
+*  List all dependencies explicitely
 *  Try out new fun looking tools (namely fzf, fd, rg, z and some Vim plugins like incsearch, fzf, vim fugitive, nerdtree, etc)
-*  Automate the addition to the .bashrcfile (with a Makefile ? A bash script ?)
+*  Automate the addition to the .bashrc file (with a Makefile ? A bash script ?)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 
 Author: Yannick SCHINI
