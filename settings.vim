@@ -32,10 +32,10 @@ set wrap "Wrap lines
 set laststatus=2
 
 inoremap <Tab> <Esc>`^
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " For VIM Signify (default is 4000ms - way too long)
 set updatetime=100
