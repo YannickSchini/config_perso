@@ -36,6 +36,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+nnoremap <C-p> :Files<Cr>
 
 " For VIM Signify (default is 4000ms - way too long)
 set updatetime=100
@@ -47,4 +48,6 @@ autocmd BufWritePre * %s/\s\+$//e
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
+
+let g:fzf_layout = { 'down': '~30%' }
 

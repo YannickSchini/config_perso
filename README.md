@@ -34,6 +34,7 @@ endtry
 *  [FZF](https://github.com/junegunn/fzf#using-linux-package-managers)
 *  [Vim Plug](https://github.com/junegunn/vim-plug)
 *  [Powerline fonts](https://github.com/powerline/fonts)
+*  [Ripgrep](https://github.com/BurntSushi/ripgrep)
 
 # TODO
 

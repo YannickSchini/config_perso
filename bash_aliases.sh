@@ -36,3 +36,5 @@ alias venv='source venv/bin/activate'
 # Misc
 alias ll='ls -lah'
 
+# FZF config to make it use ripgrep instead of find
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
