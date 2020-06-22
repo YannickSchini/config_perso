@@ -21,6 +21,12 @@ Plug 'tpope/vim-fugitive'
 " Power up the status bar
 Plug 'vim-airline/vim-airline'
 
+" More robust human failure handling
+Plug 'mbbill/undotree'
+
+" New colorscheme
+Plug 'gruvbox-community/gruvbox'
+
 " Initialize plugin system
 call plug#end()
 

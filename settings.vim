@@ -1,48 +1,65 @@
 set nocompatible
 set nu
 set rnu
-set history=500
+set noshowmatch
 set wildmenu
 set wildignore=*.o,*~,*.pyc
-set ruler
-set cmdheight=1
-set ignorecase
+set noerrorbells
 set smartcase
-set hlsearch
+set nohlsearch
 set incsearch
 set magic
-set showmatch
-set mat=2
-set foldcolumn=1
 syntax enable
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+set updatetime=50
 
-colorscheme slate
+set termguicolors
 
 set encoding=utf8
 set expandtab
-set smarttab
+set tabstop=4 softtabstop=4
 set shiftwidth=4
-set tabstop=4
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set smarttab
+set autoindent
+set smartindent
+set wrap
 set laststatus=2
 
-inoremap <Tab> <Esc>`^
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+colorscheme gruvbox
+set background=dark
+
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 nnoremap <C-p> :Files<Cr>
 
-" For VIM Signify (default is 4000ms - way too long)
-set updatetime=100
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
 
 " Remove trailing white-space
-autocmd BufWritePre * %s/\s\+$//e
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 50)
+augroup END
 
 " For Airline to show open buffers in tabs
 let g:airline#extensions#tabline#enabled = 1
@@ -51,3 +68,10 @@ let g:airline_powerline_fonts = 1
 
 let g:fzf_layout = { 'down': '~30%' }
 
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
+
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25

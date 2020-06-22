@@ -23,8 +23,9 @@ In order for it to load properly, just add the following snippet to your `.vimrc
 
 ```bash
 try
-  source ~/.custom/settings.vim
   source ~/.custom/plugins.vim
+  source ~/.custom/settings.vim
+  source ~/.custom/keymaps.vim
 catch
 endtry
 ```
