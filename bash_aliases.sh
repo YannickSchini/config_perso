@@ -14,7 +14,6 @@ alias gcob='git checkout -b'
 
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
   source /usr/share/bash-completion/completions/git
-  __git_complete gst _git_status
   __git_complete gci _git_commit
   __git_complete glola _git_log
   __git_complete gpull _git_pull

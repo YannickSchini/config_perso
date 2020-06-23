@@ -14,12 +14,12 @@ set updatetime=50
 
 set termguicolors
 
+set hidden
 set encoding=utf8
 set expandtab
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smarttab
-set autoindent
 set smartindent
 set wrap
 set laststatus=2
