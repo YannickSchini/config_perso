@@ -32,6 +32,9 @@ set undofile
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set splitbelow
+set splitright
+
 colorscheme gruvbox
 set background=dark
 
