@@ -40,3 +40,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # Open file in Vim with FZF
 alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
