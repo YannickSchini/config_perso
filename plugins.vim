@@ -15,8 +15,14 @@ Plug 'haya14busa/is.vim'
 " Show git file changes in the gutter.
 Plug 'mhinz/vim-signify'
 
+" Handle surrounding characters easily
+Plug 'tpope/vim-surround'
+
 " Git integration within Vim
 Plug 'tpope/vim-fugitive'
+
+" Easily comment/uncomment
+Plug 'tpope/vim-commentary'
 
 " Power up the status bar
 Plug 'vim-airline/vim-airline'
