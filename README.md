@@ -36,11 +36,10 @@ endtry
 *  [Vim Plug](https://github.com/junegunn/vim-plug)
 *  [Powerline fonts](https://github.com/powerline/fonts)
 *  [Ripgrep](https://github.com/BurntSushi/ripgrep)
+*  [Bat](https://github.com/sharkdp/bat)
 
 # TODO
 
-*  List all dependencies explicitely
-*  Try out new fun looking tools (namely fzf, fd, rg, z and some Vim plugins like incsearch, fzf, vim fugitive, nerdtree, etc)
 *  Automate the addition to the .bashrc file (with a Makefile ? A bash script ?)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 
