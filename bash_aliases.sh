@@ -45,4 +45,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias cat='bat --theme "Monokai Extended"'
+# alias cat='bat --theme "Monokai Extended"'
+if [ -x "$(command -v bat)" ]; then
+  alias cat='bat --theme "Monokai Extended"'
+fi
