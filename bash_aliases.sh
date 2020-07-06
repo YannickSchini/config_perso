@@ -44,3 +44,5 @@ alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+alias cat='bat --theme "Monokai Extended"'
