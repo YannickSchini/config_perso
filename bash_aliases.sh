@@ -26,7 +26,7 @@ else
   echo "Error loading git completions"
 fi
 
-alias gco='git branch -a | fzf | cut -d / -f 3 | xargs git checkout'
+#alias gco='git branch -a | fzf | cut -d / -f 3 | xargs git checkout'
 alias gbrd='git branch | fzf -m | xargs git branch -D'
 
 # Easily startup python venv
@@ -49,3 +49,12 @@ alias ....='cd ../../..'
 if [ -x "$(command -v bat)" ]; then
   alias cat='bat --theme "Monokai Extended"'
 fi
+
+function gco() {
+    if [ -z "$1" ]
+    then
+        git branch | fzf -i --height 30% | xargs git checkout
+    else
+        git checkout $1
+    fi
+}
