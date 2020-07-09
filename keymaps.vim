@@ -6,4 +6,4 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <C-p> :Files<Cr>
+nnoremap <leader>f :Files<CR>
