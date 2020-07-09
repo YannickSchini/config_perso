@@ -39,7 +39,7 @@ alias ll='ls -lah'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden -g "!{.git,venv}"'
 
 # Open file in Vim with FZF
-alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
+# alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -50,11 +50,22 @@ if [ -x "$(command -v bat)" ]; then
   alias cat='bat --theme "Monokai Extended"'
 fi
 
+# Git CheckOut
 function gco() {
     if [ -z "$1" ]
     then
         git branch | fzf -i --height 30% | xargs git checkout
     else
         git checkout $1
+    fi
+}
+
+# Open File
+function of() {
+    if [ -z "$1" ]
+    then
+        vim $(fzf --reverse --preview "cat {}")
+    else
+        vim $1
     fi
 }
