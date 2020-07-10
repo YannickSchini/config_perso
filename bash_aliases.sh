@@ -26,9 +26,6 @@ else
   echo "Error loading git completions"
 fi
 
-#alias gco='git branch -a | fzf | cut -d / -f 3 | xargs git checkout'
-alias gbrd='git branch | fzf -m | xargs git branch -D'
-
 # Easily startup python venv
 alias venv='source venv/bin/activate'
 
@@ -38,34 +35,46 @@ alias ll='ls -lah'
 # FZF config to make it use ripgrep instead of find
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden -g "!{.git,venv}"'
 
-# Open file in Vim with FZF
-# alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-# alias cat='bat --theme "Monokai Extended"'
 if [ -x "$(command -v bat)" ]; then
   alias cat='bat --theme "Monokai Extended"'
 fi
 
 # Git CheckOut
+#alias gco='git branch -a | fzf | cut -d / -f 3 | xargs git checkout'
 function gco() {
     if [ -z "$1" ]
     then
-        git branch | fzf -i --height 30% | xargs git checkout
+        git branch -a | fzf -i --height 30% | cut -d / -f 3 | xargs git checkout
     else
         git checkout $1
     fi
 }
 
 # Open File
+# alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
 function of() {
     if [ -z "$1" ]
     then
         vim $(fzf --reverse --preview "cat {}")
     else
         vim $1
+    fi
+}
+
+# Remove branches
+# alias gbrd='git branch | fzf -m | xargs git branch -D'
+function gbrd() {
+    if [ -z "$1" ]
+    then
+        git branch | fzf -m | xargs git branch -D
+    elif [ "$1" = "merged" ]
+    then
+        git branch --merged | rg -v "(^\*|master)" | xargs git branch -D
+    else
+        git branch -D "$1"
     fi
 }
