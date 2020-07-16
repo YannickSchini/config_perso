@@ -45,7 +45,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 if [ -x "$(command -v bat)" ]; then
-  alias cat='bat --theme "Monokai Extended"'
+  alias cat='bat --style=numbers,changes --theme "Monokai Extended"'
 fi
 
 # Git CheckOut
