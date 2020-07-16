@@ -11,9 +11,10 @@ The file `bash_aliases.sh` contains my bash aliases (as expected).
 In order for them to be loaded properly, add the following snippet to `~/.bashrc`:
 
 ```bash
-# Add bash aliases.
-if [ -f ~/.custom/bash_aliases.sh ]; then
-    source ~/.custom/bash_aliases.sh
+# Add bash config.
+if [ -d ~/.custom/ ]; then
+    source ~/.custom/bash_config.sh
+    source ~/.custom/git_aliases.sh
 fi
 ```
 ## Vim config
