@@ -38,6 +38,7 @@ alias ll='ls -lah'
 
 # FZF config to make it use ripgrep instead of find
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden -g "!{.git,venv}"'
+export FZF_DEFAULT_OPTS='--bind shift-up:preview-up,shift-down:preview-down,page-up:preview-page-up,page-down:preview-page-down'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -48,7 +49,6 @@ if [ -x "$(command -v bat)" ]; then
 fi
 
 # Git CheckOut
-#alias gco='git branch -a | fzf | cut -d / -f 3 | xargs git checkout'
 function gco() {
     if [ -z "$1" ]
     then
@@ -59,11 +59,14 @@ function gco() {
 }
 
 # Open File
-# alias of='vim $(rg --files --no-ignore-vcs --hidden -g "!{.git,venv}" . | fzf --reverse --preview "cat {}")'
 function of() {
     if [ -z "$1" ]
     then
-        vim $(fzf --reverse --preview "cat {}")
+        if [ -x "$(command -v bat)" ]; then
+            vim $(fzf --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}")
+        else
+            vim $(fzf --reverse --preview "cat {}")
+        fi
     else
         vim $1
     fi
