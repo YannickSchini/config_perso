@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Open File
 function of() {
     if [ -z "$1" ]

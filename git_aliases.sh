@@ -1,9 +1,8 @@
 #!/bin/bash
+
 # Aliases
 alias gst='git status'
 alias gci='git commit -m'
-alias glog='git log --graph --oneline'
-alias glola='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)" --all'
 alias gf='git fetch'
 alias gpull='git pull --prune --rebase'
 alias grbi='git rebase -i'
@@ -12,6 +11,9 @@ alias grbc='git rebase --continue'
 alias ga='git add'
 alias gbr='git branch'
 alias gcob='git checkout -b'
+alias gsl='git log --oneline --decorate -30'
+alias gsla='git log --oneline --decorate --graph --all -30'
+alias gslap='git log --oneline --decorate --graph --all --numstat'
 
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
   source /usr/share/bash-completion/completions/git
