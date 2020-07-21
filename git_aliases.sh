@@ -2,7 +2,7 @@
 
 # Aliases
 alias gst='git status'
-alias gci='git commit -m'
+alias gci='git commit'
 alias gf='git fetch'
 alias gpull='git pull --prune --rebase'
 alias grbi='git rebase -i'
