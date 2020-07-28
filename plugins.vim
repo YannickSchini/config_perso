@@ -33,6 +33,9 @@ Plug 'mbbill/undotree'
 " New colorscheme
 Plug 'gruvbox-community/gruvbox'
 
+" Autocomplete menu appears when I start to type
+Plug 'vim-scripts/AutoComplPop'
+
 " Initialize plugin system
 call plug#end()
 

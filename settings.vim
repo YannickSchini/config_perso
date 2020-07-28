@@ -14,6 +14,10 @@ set updatetime=50
 
 set termguicolors
 
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
+
 set hidden
 set encoding=utf8
 set expandtab
@@ -30,6 +34,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 set colorcolumn=80
+set cursorline
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 set splitbelow
