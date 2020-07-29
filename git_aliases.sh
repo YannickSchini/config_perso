@@ -48,7 +48,7 @@ fi
 function gco() {
     if [ -z "$1" ]
     then
-        git branch -a | fzf -i --height 30% | cut -d / -f 3 | xargs git checkout
+        git branch -a | fzf -i --height 30% | cut -d / -f 3- | xargs git checkout
     else
         git checkout $1
     fi
