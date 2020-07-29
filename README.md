@@ -38,6 +38,7 @@ endtry
 *  [Powerline fonts](https://github.com/powerline/fonts)
 *  [Ripgrep](https://github.com/BurntSushi/ripgrep)
 *  [Bat](https://github.com/sharkdp/bat)
+*  [Z](https://github.com/rupa/z)
 
 # TODO
 
