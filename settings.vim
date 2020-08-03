@@ -40,6 +40,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 set splitbelow
 set splitright
 
+set scrolloff=3 " Keep 3 lines below and above the cursor
+
 colorscheme gruvbox
 set background=dark
 
