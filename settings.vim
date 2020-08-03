@@ -69,6 +69,8 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 50)
 augroup END
 
+let g:surround_100 = "{{ \r }}"
+
 " For Airline to show open buffers in tabs
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
