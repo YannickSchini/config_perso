@@ -20,3 +20,7 @@ inoremap <expr> <C-h> pumvisible() ? "<C-e>" : "<C-h>"
 " Blank line insertion in Normal mode
 nnoremap <silent> <leader>O  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
 nnoremap <silent> <leader>o  :<c-u>put =repeat([''],v:count)<bar>'[-1<cr>
+
+" CoC mappings
+nmap <leader>rr <Plug>(coc-rename)
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
