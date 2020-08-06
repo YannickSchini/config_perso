@@ -43,12 +43,6 @@ set scrolloff=3 " Keep 3 lines below and above the cursor
 colorscheme gruvbox
 set background=dark
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-nnoremap <C-p> :Files<Cr>
-
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
