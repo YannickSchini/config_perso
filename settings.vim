@@ -21,8 +21,6 @@ set shortmess+=c
 set hidden
 set encoding=utf8
 set expandtab
-set tabstop=4 softtabstop=4
-set shiftwidth=4
 set smarttab
 set smartindent
 set wrap
@@ -65,6 +63,16 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
+
+" Indentation
+" Use autocmd as long as we have only few file types, else switch to cleaner
+" specific files per filetype, see
+" https://stackoverflow.com/questions/158968/changing-vim-indentation-behavior-by-file-type
+" https://vim.fandom.com/wiki/Indenting_source_code
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType json setlocal expandtab shiftwidth=4 softtabstop=4
 
 augroup highlight_yank
     autocmd!
