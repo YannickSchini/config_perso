@@ -34,3 +34,5 @@ fi
 
 # For z-jump to work
 . ~/z/z.sh
+
+export EDITOR=vim
