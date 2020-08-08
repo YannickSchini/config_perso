@@ -22,12 +22,9 @@ I'm trying to switch to vim as one of my core tools, so I'll also add my Vim con
 In order for it to load properly, just add the following snippet to your `.vimrc` file.
 
 ```bash
-try
-  source ~/.custom/plugins.vim
-  source ~/.custom/settings.vim
-  source ~/.custom/keymaps.vim
-catch
-endtry
+for f in split(glob('~/dotfiles/*.vim'), '\n')
+    exe 'source' f
+endfor
 ```
 
 # Dependencies
