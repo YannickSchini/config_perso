@@ -12,9 +12,8 @@ In order for them to be loaded properly, add the following snippet to `~/.bashrc
 
 ```bash
 # Add bash config.
-if [ -d ~/.custom/ ]; then
-    source ~/.custom/bash_config.sh
-    source ~/.custom/git_aliases.sh
+if [ -d ~/dotfiles/ ]; then
+    for f in $(fd . ~/dotfiles --max-depth 1 --extension sh); do source $f; done
 fi
 ```
 ## Vim config
@@ -47,4 +46,3 @@ endtry
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 
 Author: Yannick SCHINI
-
