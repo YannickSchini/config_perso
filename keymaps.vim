@@ -24,3 +24,10 @@ nnoremap <leader>gci :Gcommit<CR>
 nnoremap <leader>gpush :Gpush<CR>
 nnoremap <leader>gpull :Gpull<CR>
 nnoremap <leader>gf :Gfetch<CR>
+
+" Auto closing with matching brackets
+inoremap ( ()<C-G>U<Left>
+inoremap [ []<C-G>U<Left>
+inoremap { {}<C-G>U<Left>
+inoremap " ""<C-G>U<Left>
+inoremap ' ''<C-G>U<Left>
