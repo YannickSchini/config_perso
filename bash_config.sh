@@ -31,3 +31,6 @@ alias ....='cd ../../..'
 if [ -x "$(command -v bat)" ]; then
   alias cat='bat --style=numbers,changes --theme "Monokai Extended"'
 fi
+
+# For z-jump to work
+. ~/z/z.sh
