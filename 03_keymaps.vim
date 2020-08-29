@@ -1,8 +1,9 @@
 let mapleader = " "
 
-nnoremap <leader>e :wincmd v<bar> :Ex <bar> :vertical <CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>of :Files<CR>
+
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 " Window commands
 nnoremap <leader>h :wincmd h<CR>

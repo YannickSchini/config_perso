@@ -36,6 +36,9 @@ Plug 'gruvbox-community/gruvbox'
 " Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" File explorer
+Plug 'preservim/nerdtree'
+
 " Initialize plugin system
 call plug#end()
 

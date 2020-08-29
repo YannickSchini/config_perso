@@ -85,3 +85,6 @@ let g:fzf_layout = { 'down': '~30%' }
 if executable('rg')
     let g:rg_derive_root='true'
 endif
+
+" Leave Vim when the only buffer open is a NerdTree tab
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
