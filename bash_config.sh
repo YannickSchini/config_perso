@@ -5,12 +5,29 @@ function of() {
     if [ -z "$1" ]
     then
         if [ -x "$(command -v bat)" ]; then
-            vim $(fzf --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}")
+            vim $(fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}")
         else
-            vim $(fzf --reverse --preview "cat {}")
+            vim $(fzf -m --reverse --preview "cat {}")
         fi
     else
         vim $1
+    fi
+}
+
+# Find file based on snippet
+function ff() {
+    # TODO: check that VIM is opened in the right directory (the root of the git folder when available, the directory of the file when not in a git repo)
+    if [ -z "$1" ]
+    then
+        echo "Find File utility, usage: ff <string to be searched>"
+    else
+        if [ -x "$(command -v rg)" ] && [ -x "$(command -v bat)" ] && [ -x "$(command -v fzf)" ]; then
+            vim $(rg $1 --files-with-matches . | fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}")
+        elif [ -x "$(command -v rg)" ] && [ ! -x "$(command -v bat)" ] && [ -x "$(command -v fzf)" ]; then
+            vim $(rg $1 --files-with-matches . | fzf -m --reverse --preview "cat {}")
+        else
+            echo "Please install the required libraries (ripgrep, fzf)"
+        fi
     fi
 }
 
