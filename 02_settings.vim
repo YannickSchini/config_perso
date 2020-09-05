@@ -80,7 +80,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 
-let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_layout = { 'down': '~50%' }
 
 if executable('rg')
     let g:rg_derive_root='true'

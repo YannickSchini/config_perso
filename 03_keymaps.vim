@@ -2,6 +2,7 @@ let mapleader = " "
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>of :Files<CR>
+nnoremap <leader>ff :Rg<CR>
 
 nnoremap <leader>e :NERDTreeToggle<CR>
 
@@ -12,8 +13,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Blank line insertion in Normal mode
-nnoremap <silent> <leader>O  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
-nnoremap <silent> <leader>o  :<c-u>put =repeat([''],v:count)<bar>'[-1<cr>
+nnoremap <leader>O :<C-u>put! =repeat(nr2char(10), v:count1) <Bar> ']+1<Enter>
+nnoremap <leader>o :<C-u>put =repeat(nr2char(10), v:count1) <Bar> '[-1<Enter>
 
 " CoC mappings
 nmap <leader>rr <Plug>(coc-rename)
@@ -31,4 +32,4 @@ inoremap ( ()<C-G>U<Left>
 inoremap [ []<C-G>U<Left>
 inoremap { {}<C-G>U<Left>
 inoremap " ""<C-G>U<Left>
-inoremap ' ''<C-G>U<Left>
+" inoremap ' ''<C-G>U<Left>
