@@ -12,6 +12,12 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" Buffer commands
+nnoremap <C-h> :bprevious<CR>
+nnoremap <C-j> :Buffers<CR>
+nnoremap <C-k>  :bdelete<CR>
+nnoremap <C-l> :bnext<CR>
+
 " Blank line insertion in Normal mode
 nnoremap <leader>O :<C-u>put! =repeat(nr2char(10), v:count1) <Bar> ']+1<Enter>
 nnoremap <leader>o :<C-u>put =repeat(nr2char(10), v:count1) <Bar> '[-1<Enter>
