@@ -39,7 +39,21 @@ endfor
 
 # TODO
 
+*  If the second member of a pair of symbols (brackets, parenthesis) is to the right of the opening one when the first one is deleted, delete the second automatically
+*  Autocomplete & proper indentation for Python code
+*  Find a way to perform a commit-per-commit code review without leaving Vim
+*  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the addition to the .bashrc file (with a Makefile ? A bash script ?)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
+
+# TO CHECK
+
+*  Check that :Rg only looks through all the files' content and not their name
+
+# DONE
+
+*  See how to bind the autocomplete on tab
+*  Handle interruptions in the 'of' and 'ff' functions better
+*  Improve vim buffer handling with new keymaps
 
 Author: Yannick SCHINI
