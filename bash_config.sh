@@ -5,9 +5,9 @@ function of() {
     if [ -z "$1" ]
     then
         if [ -x "$(command -v bat)" ]; then
-            FILES=$(fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}") && vim "$FILES"
+            FILES=$(fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}") && vim $FILES
         else
-            FILES=$(fzf -m --reverse --preview "cat {}") && vim "$FILES"
+            FILES=$(fzf -m --reverse --preview "cat {}") && vim $FILES
         fi
     else
         vim $1
@@ -22,9 +22,9 @@ function ff() {
         echo "Find File utility, usage: ff <string to be searched>"
     else
         if [ -x "$(command -v rg)" ] && [ -x "$(command -v bat)" ] && [ -x "$(command -v fzf)" ]; then
-            FILES=$(rg $1 --files-with-matches . | fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}") && vim "$FILES"
+            FILES=$(rg $1 --files-with-matches . | fzf -m --reverse --preview "bat --style=numbers,changes --theme 'Monokai Extended' --color=always {}") && vim $FILES
         elif [ -x "$(command -v rg)" ] && [ ! -x "$(command -v bat)" ] && [ -x "$(command -v fzf)" ]; then
-            FILES=$(rg $1 --files-with-matches . | fzf -m --reverse --preview "cat {}") && vim "$FILES"
+            FILES=$(rg $1 --files-with-matches . | fzf -m --reverse --preview "cat {}") && vim $FILES
         else
             echo "Please install the required libraries (ripgrep, fzf)"
         fi
