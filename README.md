@@ -40,7 +40,7 @@ endfor
 # TODO
 
 *  If the second member of a pair of symbols (brackets, parenthesis) is to the right of the opening one when the first one is deleted, delete the second automatically
-*  Autocomplete & proper indentation for Python code
+*  Autocomplete, proper formatting & indentation for Python code
 *  Find a way to perform a commit-per-commit code review without leaving Vim
 *  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the addition to the .bashrc file (with a Makefile ? A bash script ?)

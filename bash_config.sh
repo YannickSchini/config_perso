@@ -46,7 +46,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 if [ -x "$(command -v bat)" ]; then
-  alias cat='bat --style=numbers,changes --theme "Monokai Extended"'
+  alias cat='bat --style=grid --theme "Monokai Extended"'
+  alias catf='bat --style=numbers,changes --theme "Monokai Extended"'
 fi
 
 # For z-jump to work
