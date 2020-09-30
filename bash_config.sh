@@ -10,7 +10,7 @@ function of() {
             FILES=$(fzf -m --reverse --preview "cat {}") && vim $FILES
         fi
     else
-        vim $1
+        vim $@
     fi
 }
 
