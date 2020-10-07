@@ -48,10 +48,11 @@ endfor
 
 # TO CHECK
 
-*  Check that :Rg only looks through all the files' content and not their name
+-
 
 # DONE
 
+*  Do so :Rg only looks through all the files' content and not their name
 *  See how to bind the autocomplete on tab
 *  Handle interruptions in the 'of' and 'ff' functions better
 *  Improve vim buffer handling with new keymaps

@@ -99,6 +99,8 @@ let g:fzf_layout = { 'down': '~50%' }
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""" RG """""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 if executable('rg')
     let g:rg_derive_root='true'
 endif
