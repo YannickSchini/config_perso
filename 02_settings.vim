@@ -118,6 +118,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-json',
+  \ 'coc-python',
   \ ]
 
 set signcolumn=yes

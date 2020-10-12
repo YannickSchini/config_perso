@@ -36,6 +36,7 @@ endfor
 *  [Bat](https://github.com/sharkdp/bat)
 *  [fd](https://github.com/sharkdp/fd)
 *  [Z](https://github.com/rupa/z)
+*  [CoC](https://github.com/neoclide/coc.nvim)'s own dependencies: node, [yarn](https://classic.yarnpkg.com/fr/docs/install/#debian-stable) (or [npm](https://www.npmjs.com/get-npm))
 
 # TODO
 
