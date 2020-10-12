@@ -3,7 +3,7 @@
 The objective for this repo is to store the different customizations that I appreciate having on my computer.
 This allows me to get all I need to setup my stuff easily from any computer.
 
-For convenience, I'll assume that this repo is cloned into `~/.custom/`
+For convenience, I'll assume that this repo is cloned into `~/dotfiles/`
 
 ## Bash aliases
 
