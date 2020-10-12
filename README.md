@@ -45,6 +45,7 @@ endfor
 *  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the addition to the .bashrc file (with a Makefile ? A bash script ?)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
+*  Create aliases for Docker usage (image rm, container rm, etc)
 
 # TO CHECK
 
