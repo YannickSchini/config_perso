@@ -5,30 +5,24 @@ This allows me to get all I need to setup my stuff easily from any computer.
 
 For convenience, I'll assume that this repo is cloned into `~/dotfiles/`
 
-## Bash aliases
+## Installation
 
-The file `bash_aliases.sh` contains my bash aliases (as expected).
-In order for them to be loaded properly, add the following snippet to `~/.bashrc`:
-
-```bash
-# Add bash config.
-if [ -d ~/dotfiles/ ]; then
-    for f in $(fd . ~/dotfiles --max-depth 1 --extension sh); do source $f; done
-fi
-```
-## Vim config
-
-I'm trying to switch to vim as one of my core tools, so I'll also add my Vim config here as well.
-In order for it to load properly, just add the following snippet to your `.vimrc` file.
+For ease of installation, I opted to go with [GNU Stow](https://www.gnu.org/software/stow/).
+To install these dotfiles, simply run the following lines:
 
 ```bash
-for f in split(glob('~/dotfiles/*.vim'), '\n')
-    exe 'source' f
-endfor
+# Install GNU Stow
+sudo apt-get install stow
+
+# Install the dotfiles
+cd ~/.dotfiles
+rm .bashrc && stow bash
+stow vim
 ```
 
 # Dependencies
 
+*  [GNU Stow](https://www.gnu.org/software/stow/)
 *  [FZF](https://github.com/junegunn/fzf#using-linux-package-managers)
 *  [Vim Plug](https://github.com/junegunn/vim-plug)
 *  [Powerline fonts](https://github.com/powerline/fonts)
@@ -37,10 +31,10 @@ endfor
 *  [fd](https://github.com/sharkdp/fd)
 *  [Z](https://github.com/rupa/z)
 *  [CoC](https://github.com/neoclide/coc.nvim)'s own dependencies: node, [yarn](https://classic.yarnpkg.com/fr/docs/install/#debian-stable) (or [npm](https://www.npmjs.com/get-npm))
+*  [Jedi Language Server](https://pypi.org/project/jedi/) as a Python Language Server
 
 # TODO
 
-*  Handle the sourcing of the dotfiles differently (for vim and bash) with symbolic linking to allow handling of the coc-config file (take a look at GNU Stow ?)
 *  Find a way to perform a commit-per-commit code review without leaving Vim
 *  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
@@ -52,6 +46,7 @@ endfor
 
 # DONE
 
+*  Handle the sourcing of the dotfiles differently (for vim and bash) with symbolic linking to allow handling of the coc-config file (take a look at GNU Stow ?)
 *  Test the use of the Jedi Language Server for Python instead of the Microsoft one
 *  Check for "git gutter"-like features in CoC: maybe vim-signify plugin isn't required anymore ?
 *  Finish the work around Python code: create latest keymaps for go to definition & other interesting features
