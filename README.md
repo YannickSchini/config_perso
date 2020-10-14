@@ -41,13 +41,10 @@ endfor
 # TODO
 
 *  Handle the sourcing of the dotfiles differently (for vim and bash) with symbolic linking to allow handling of the coc-config file (take a look at GNU Stow ?)
-*  Finish the work around Python code: create latest keymaps for go to definition & other interesting features
-*  Test the use of the Jedi Language Server for Python instead of the Microsoft one
 *  Find a way to perform a commit-per-commit code review without leaving Vim
 *  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 *  Create aliases for Docker usage (image rm, container rm, etc)
-*  Check for "git gutter"-like features in CoC: maybe vim-signify plugin isn't required anymore ?
 
 # TO CHECK
 
@@ -55,6 +52,9 @@ endfor
 
 # DONE
 
+*  Test the use of the Jedi Language Server for Python instead of the Microsoft one
+*  Check for "git gutter"-like features in CoC: maybe vim-signify plugin isn't required anymore ?
+*  Finish the work around Python code: create latest keymaps for go to definition & other interesting features
 *  Do so :Rg only looks through all the files' content and not their name
 *  See how to bind the autocomplete on tab
 *  Handle interruptions in the 'of' and 'ff' functions better
