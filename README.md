@@ -7,6 +7,8 @@ For convenience, I'll assume that this repo is cloned into `~/dotfiles/`
 
 ## Installation
 
+Before installing the dotfiles themselves, please install all the dependencies first.
+
 For ease of installation, I opted to go with [GNU Stow](https://www.gnu.org/software/stow/).
 To install these dotfiles, simply run the following lines:
 
@@ -15,8 +17,10 @@ To install these dotfiles, simply run the following lines:
 sudo apt-get install stow
 
 # Install the dotfiles
+cd ~
+rm .bashrc .vimrc
 cd ~/.dotfiles
-rm .bashrc && stow bash
+stow bash
 stow vim
 ```
 
