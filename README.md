@@ -40,9 +40,9 @@ stow vim
 # TODO
 
 *  Find a way to perform a commit-per-commit code review without leaving Vim
-*  Handle vaulted files properly (see diffs, handle conflicts, etc)
 *  Automate the installation of all dependencies (git, fzf, fd, rg, etc)
 *  Create aliases for Docker usage (image rm, container rm, etc)
+*  ( Handle vaulted files properly (see diffs, handle conflicts, etc) )
 
 # TO CHECK
 
@@ -50,6 +50,7 @@ stow vim
 
 # DONE
 
+*  Add shortcuts for easy handling of git conflicts within Vim
 *  Handle the sourcing of the dotfiles differently (for vim and bash) with symbolic linking to allow handling of the coc-config file (take a look at GNU Stow ?)
 *  Test the use of the Jedi Language Server for Python instead of the Microsoft one
 *  Check for "git gutter"-like features in CoC: maybe vim-signify plugin isn't required anymore ?
