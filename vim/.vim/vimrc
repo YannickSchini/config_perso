@@ -183,6 +183,12 @@ set signcolumn=yes
 " Keymaps
 " -----------------------------------------------------------------------------
 
+" Avoid bad reflexes
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 let mapleader = " "
 
 nnoremap <leader>u :UndotreeShow<CR>
