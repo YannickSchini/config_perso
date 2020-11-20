@@ -38,7 +38,7 @@ alias venv='source venv/bin/activate'
 alias ll='ls -lah'
 
 # FZF config to make it use ripgrep instead of find
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden -g "!{.git,venv}"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g"!{.git}"'
 export FZF_DEFAULT_OPTS='--bind shift-up:preview-up,shift-down:preview-down,page-up:preview-page-up,page-down:preview-page-down'
 
 alias ..='cd ..'
