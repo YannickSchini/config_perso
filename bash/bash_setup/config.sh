@@ -36,6 +36,7 @@ alias venv='source venv/bin/activate'
 
 # Misc
 alias ll='ls -lah'
+alias vimbegood='docker run -it --rm brandoncc/vim-be-good:latest'
 
 # FZF config to make it use ripgrep instead of find
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g"!{.git}"'
