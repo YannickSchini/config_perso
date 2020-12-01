@@ -1,1 +1,2 @@
-" Empty vimrc for initialization
+set nu
+set rnu
