@@ -1,5 +1,12 @@
+" Overall settings
 set nu
 set rnu
 set wildmenu
 set hidden
 set incsearch
+
+" Key mappings
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
