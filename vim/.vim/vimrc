@@ -2,3 +2,4 @@ set nu
 set rnu
 set wildmenu
 set hidden
+set incsearch
