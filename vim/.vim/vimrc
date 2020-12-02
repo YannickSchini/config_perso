@@ -8,6 +8,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive' " Git integration within Vim
+Plug 'morhetz/gruvbox' " Colorscheme of choice
 
 call plug#end()
 
@@ -18,6 +19,9 @@ set wildmenu
 set hidden
 set incsearch
 set scrolloff=3 " Keep 3 lines below and above the cursor
+set background=dark " Gruvbox dark version
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " Identation
 set expandtab
