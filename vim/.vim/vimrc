@@ -6,6 +6,11 @@ set hidden
 set incsearch
 set scrolloff=3 " Keep 3 lines below and above the cursor
 
+" Identation
+set expandtab
+set autoindent
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
 " Key mappings
 noremap <Up> <Nop>
 noremap <Down> <Nop>
