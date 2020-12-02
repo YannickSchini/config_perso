@@ -11,12 +11,6 @@ set expandtab
 set autoindent
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
-" Key mappings
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 " Plugins
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -30,3 +24,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive' " Git integration within Vim
 
 call plug#end()
+
+" Key mappings
+let mapleader = " "
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
