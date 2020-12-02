@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive' " Git integration within Vim
 Plug 'morhetz/gruvbox' " Colorscheme of choice
 Plug 'tpope/vim-surround' " Management of 'surrounding pairs'
 Plug 'tpope/vim-commentary' " Easy commenting/uncommenting
+Plug 'vim-airline/vim-airline' " Status bar with relevant info on bottom of screen
 
 call plug#end()
 
@@ -23,7 +24,11 @@ set incsearch
 set scrolloff=3 " Keep 3 lines below and above the cursor
 set background=dark " Gruvbox dark version
 let g:gruvbox_italic=1
+" TODO: Figure out why contrast settings don't seem to make a difference
 colorscheme gruvbox
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#poetv#enabled = 1
 
 " Identation
 set expandtab
