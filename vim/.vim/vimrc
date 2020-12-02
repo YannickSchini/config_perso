@@ -58,3 +58,4 @@ nnoremap <C-k>  :bdelete<CR>
 nnoremap <C-l> :bnext<CR>
 nnoremap <leader>of :Files<CR>
 nnoremap <leader>ff :Rg<CR>
+cmap w!! w !sudo tee > /dev/null %
