@@ -12,6 +12,8 @@ Plug 'morhetz/gruvbox' " Colorscheme of choice
 Plug 'tpope/vim-surround' " Management of 'surrounding pairs'
 Plug 'tpope/vim-commentary' " Easy commenting/uncommenting
 Plug 'vim-airline/vim-airline' " Status bar with relevant info on bottom of screen
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Simple FZF Wrapper for Vim
+Plug 'junegunn/fzf.vim' " More advanced FZF functions
 
 call plug#end()
 
@@ -54,3 +56,5 @@ nnoremap <C-h> :bprevious<CR>
 nnoremap <C-j> :Buffers<CR>
 nnoremap <C-k>  :bdelete<CR>
 nnoremap <C-l> :bnext<CR>
+nnoremap <leader>of :Files<CR>
+nnoremap <leader>ff :Rg<CR>
