@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive' " Git integration within Vim
 Plug 'morhetz/gruvbox' " Colorscheme of choice
+Plug 'tpope/vim-surround' " Management of 'surrounding pairs'
+Plug 'tpope/vim-commentary' " Easy commenting/uncommenting
 
 call plug#end()
 
