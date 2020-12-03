@@ -23,6 +23,7 @@ set rnu
 set wildmenu
 set hidden
 set incsearch
+set hlsearch
 set scrolloff=3 " Keep 3 lines below and above the cursor
 set background=dark " Gruvbox dark version
 let g:gruvbox_italic=1
