@@ -16,6 +16,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Simple FZF Wrapper for Vim
 Plug 'junegunn/fzf.vim' " More advanced FZF functions
 Plug 'dense-analysis/ale' " Code linting for many languages
 Plug 'sheerun/vim-polyglot' " Advanced code indentation & highlighting
+Plug 'haya14busa/is.vim' " Plugin to improve search result highlighting
 
 call plug#end()
 
