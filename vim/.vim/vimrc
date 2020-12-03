@@ -40,7 +40,8 @@ let g:ale_fix_on_save = 1
 " Identation
 set expandtab
 set autoindent
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 foldmethod=indent
+autocmd FileType python normal zR
 
 " Key mappings
 let mapleader = " "
