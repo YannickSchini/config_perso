@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline' " Status bar with relevant info on bottom of scre
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Simple FZF Wrapper for Vim
 Plug 'junegunn/fzf.vim' " More advanced FZF functions
 Plug 'dense-analysis/ale' " Code linting for many languages
+Plug 'sheerun/vim-polyglot' " Advanced code indentation & highlighting
 
 call plug#end()
 
