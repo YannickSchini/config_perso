@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary' " Easy commenting/uncommenting
 Plug 'vim-airline/vim-airline' " Status bar with relevant info on bottom of screen
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Simple FZF Wrapper for Vim
 Plug 'junegunn/fzf.vim' " More advanced FZF functions
+Plug 'dense-analysis/ale' " Code linting for many languages
 
 call plug#end()
 
@@ -32,6 +33,9 @@ colorscheme gruvbox
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#poetv#enabled = 1
+let g:ale_linters = {'python': ['flake8', 'pylint']}
+let g:ale_fixers = {'python': ['yapf']}
+let g:ale_fix_on_save = 1
 
 " Identation
 set expandtab
@@ -59,4 +63,5 @@ nnoremap <C-k>  :bdelete<CR>
 nnoremap <C-l> :bnext<CR>
 nnoremap <leader>of :Files<CR>
 nnoremap <leader>ff :Rg<CR>
+nnoremap <leader>fix :ALEFix<CR>
 cmap w!! w !sudo tee > /dev/null %
