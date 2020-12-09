@@ -67,4 +67,5 @@ nnoremap <C-l> :bnext<CR>
 nnoremap <leader>of :Files<CR>
 nnoremap <leader>ff :Rg<CR>
 nnoremap <leader>fix :ALEFix<CR>
+nnoremap <leader>so :source $MYVIMRC<CR>
 cmap w!! w !sudo tee > /dev/null %
