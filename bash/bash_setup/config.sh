@@ -51,6 +51,10 @@ if [ -x "$(command -v bat)" ]; then
   alias catcp='bat --style=grid --theme "Monokai Extended"'
 fi
 
+if [ -x "$(command -v fdfind)" ]; then
+  alias fd='fdfind'
+fi
+
 # For z-jump to work
 . ~/z/z.sh
 
