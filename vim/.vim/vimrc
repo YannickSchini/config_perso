@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim' " More advanced FZF functions
 Plug 'dense-analysis/ale' " Code linting for many languages
 Plug 'sheerun/vim-polyglot' " Advanced code indentation & highlighting
 Plug 'haya14busa/is.vim' " Plugin to improve search result highlighting
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion and LSP support
 
 call plug#end()
 
@@ -69,3 +70,29 @@ nnoremap <leader>ff :Rg<CR>
 nnoremap <leader>fix :ALEFix<CR>
 nnoremap <leader>so :source $MYVIMRC<CR>
 cmap w!! w !sudo tee > /dev/null %
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>rn <Plug>(coc-rename)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
