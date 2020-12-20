@@ -36,15 +36,12 @@ colorscheme gruvbox
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#poetv#enabled = 1
-let g:ale_linters = {'python': ['flake8', 'pylint']}
-let g:ale_fixers = {'python': ['yapf']}
 let g:ale_fix_on_save = 1
+autocmd FileType python normal zR
 
 " Identation
 set expandtab
 set autoindent
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 foldmethod=indent
-autocmd FileType python normal zR
 
 " Key mappings
 let mapleader = " "
