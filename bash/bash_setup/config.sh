@@ -79,13 +79,7 @@ fi
 
 export EDITOR=vim
 
-# Powerline stuff
-export PATH="$HOME/.local/bin/:$PATH"
-
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# Powerline usage
+if [ -f /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+  source /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh 
 fi
