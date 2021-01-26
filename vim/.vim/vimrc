@@ -69,6 +69,7 @@ nnoremap <leader>so :source $MYVIMRC<CR>
 cmap w!! w !sudo tee > /dev/null %
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>rn <Plug>(coc-rename)
+vnoremap <leader>p "_P
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
