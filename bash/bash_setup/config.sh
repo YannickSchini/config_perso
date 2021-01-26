@@ -31,6 +31,25 @@ function ff() {
     fi
 }
 
+# Start my development environment
+function dev() {
+    if [[ -d ./venv/ ]]
+    then
+        source ./venv/bin/activate
+    fi
+    tmux has-session -t dev
+    if [ $? != 0 ]
+    then
+            tmux new-session -s dev -n vim -d
+            tmux send-keys -t dev 'of' C-m
+            tmux split-window -v -p 10 -t dev
+            tmux new-window -n bash -t dev
+            tmux select-window -t dev:1
+            tmux select-pane -t dev:1.0
+    fi
+    tmux attach -t dev
+}
+
 # Easily startup python venv
 alias venv='source venv/bin/activate'
 
