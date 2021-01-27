@@ -33,6 +33,7 @@ set background=dark " Gruvbox dark version
 let g:gruvbox_italic=1
 " TODO: Figure out why contrast settings don't seem to make a difference
 colorscheme gruvbox
+let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-yaml', 'coc-css']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#poetv#enabled = 1
